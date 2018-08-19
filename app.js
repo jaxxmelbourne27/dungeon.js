@@ -17,6 +17,8 @@ function preload() {
 }
 
 function read() {
+  // Console: "Uncaught TypeError: Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'"
+  // Canvas is not shown when the error above occurs
   var reader = new FileReader();
   reader.readAsText(files[0], "utf8");
   file.Input.addEventListener("change", readFile);
